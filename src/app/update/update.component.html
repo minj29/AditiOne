@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <h5>Update data</h5>
+                <div class="row">
+                    <form>
+
+                        <div class="form-group" mb-2>
+                          <label for="name">Enter Name</label>
+                          <input type="text" class="form-control" [(ngModel)]="employee.name" name="name"placeholder="Enter Name" >
+                        </div>
+        
+                        <div class="form-group" mb-2>
+                            <label for="client_id">Client ID</label>
+                            <input type="number" class="form-control" [(ngModel)]="employee.client_id" name="client_id" placeholder="Enter Client Id">
+                        </div>
+        
+                        <div class="form-group" mb-2>
+                            <label for="msp_id">MSP ID</label>
+                            <input type="number" class="form-control" [(ngModel)]="employee.msp_id" name="msp_id" placeholder="Enter MSP id">
+                        </div>
+        
+                        <div class="form-group" mb-2>
+                            <label for="created_at">Created At</label>
+                            <input type="datetime" class="form-control" [(ngModel)]="employee.created_at" name="created_at" placeholder="Enter Create Date">
+                        </div>
+        
+                        <div class="form-group" mb-2>
+                            <label for="updated_at">Updated At</label>
+                            <input type="datetime" class="form-control" [(ngModel)]="employee.updated_at"name="updated_at" placeholder="Enter Update Date">
+                        </div>
+                        
+                        <div class="form-group" mb-2>
+                            <label for="deleted_at">Deleted At</label>
+                            <input type="datetime" class="form-control" [(ngModel)]="employee.deleted_at"name="deleted_at" placeholder="Enter Delete date">
+                        </div>
+                       
+                      </form>
+                </div>
+                <div>
+                    <button (click)="update()" class="btn btn-success">Update</button>&nbsp;
+                    <button routerLink="/" class="btn btn-dark">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <pre>{{employee|json}}</pre> -->

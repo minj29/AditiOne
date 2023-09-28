@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "name": "ravi",
+      "email": "ravi@gmail.com",
+      "city": "bokaro",
+      "pincode": 827013,
+      "phonenumber": 9865321254,
+      "id": 1
+    },
+    {
+      "name": "sumit",
+      "email": "sumit@gmail.com",
+      "city": "pune",
+      "pincode": 894523,
+      "phonenumber": 7856265455,
+      "id": 2
+    }
+  ]
+}
