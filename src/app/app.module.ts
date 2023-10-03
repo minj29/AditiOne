@@ -12,6 +12,8 @@ import { SidepanelComponent } from './sidepanel/sidepanel.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GraphComponent } from './graph/graph.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MSPSComponent } from './msps/msps.component';
+import { ClientsComponent } from './clients/clients.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SidepanelComponent,
     DashboardComponent,
     GraphComponent,
+    MSPSComponent,
+    ClientsComponent,
    
   ],
   imports: [

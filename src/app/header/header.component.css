@@ -8,9 +8,22 @@ nav{
     align-items: center;
     font-size: 1.5rem;
     cursor: pointer;
+    margin-left: 120px;
 }
 
 .side-nav-button:hover{
     background-color: rgb(232, 242, 242);
     border-radius: 30%;
+}
+
+.navbar-collapse{
+    margin-left: 20px;
+}
+
+.btn {
+    border-color: darkgrey;
+}
+
+.navbar-brands{
+    margin-left: 10px;
 }

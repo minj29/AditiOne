@@ -14,4 +14,24 @@ export class HeaderComponent {
     this.menuStatus = !this.menuStatus;
     this.sideNavToggled.emit(this.menuStatus);
   }
+// <--------country dropdown action------->
+isDropdownOpen: boolean = false;
+selectedCountryImage: string = '/assets/india.jpg'; // Default selected country image
+
+countries = [
+  { name: 'India', image: '/assets/india.jpg' },
+  { name: 'USA', image: '/assets/usa.jpg' }
+  // Add more countries as needed
+];
+
+toggleDropdown() {
+  this.isDropdownOpen = !this.isDropdownOpen;
+}
+
+selectCountry(country: any) {
+  this.selectedCountryImage = country.image;
+  this.isDropdownOpen = false;
+  // You can perform any additional actions when a country is selected here
+  console.log(`Selected country: ${country.name}`);
+}
 }

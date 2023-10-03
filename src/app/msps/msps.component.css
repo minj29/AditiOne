@@ -1,0 +1,16 @@
+h2{
+    color: aliceblue;
+}
+
+.close{
+    font-weight: 700;
+    font-size: 23px;
+    width: 50px;
+    border: none;
+    background: none;
+}
+
+.pagination{
+    padding: 20px 16px;
+    float: right;
+}
