@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { ApiService } from '../api.service';
 import { datamodel } from './model';
+import { RowCountService } from '../row-count.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -24,7 +25,7 @@ export class ListComponent {
   employeeform!: FormGroup;
   // data: undefined|datamodel[];
   data: datamodel[] = [];
-  constructor(private formbuider:FormBuilder,private api:ApiService){}
+  constructor(private formbuider:FormBuilder,private api:ApiService,private rowCountService: RowCountService){}
 
   ngOnInit(): void {
     this.employeeform = this.formbuider.group({
@@ -36,6 +37,12 @@ export class ListComponent {
       deleted_at: ['',Validators.required],
     })
     this.getemployee();
+    this.updateRowCount();
+  }
+
+  private updateRowCount() {
+    const rowCount = this.data.length;
+    this.rowCountService.setRowCount(rowCount);
   }
 
   addemployee(data: datamodel) {

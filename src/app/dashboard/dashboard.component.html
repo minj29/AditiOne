@@ -4,35 +4,35 @@
         
         <div class="box">
             <i class="fa-solid fa-user-group"></i>
-            <button class="btn" routerLink=""><h4>EMPLOYEES</h4></button>
-            
+            <button class="btn" routerLink=""><p>EMPLOYEES</p></button>
+            <h4></h4>
         </div>
 
         
         <div class="box">
             <i class="fa-solid fa-people-group"></i>
-            <button class="btn" routerLink="/clients"><h4>CLIENTS</h4></button>
-            
+            <button class="btn" routerLink="/clients"><p>CLIENTS</p></button>
+            <h4>{{ clientsCount }}</h4>
         </div>
 
         
         <div class="box">
             <i class="fa-solid fa-basket-shopping"></i>
-            <button class="btn" routerLink="/msps"><h4>MSPS</h4></button>
-            
+            <button class="btn" routerLink="/msps"><p>MSPS</p></button>
+            <h4>{{ mspsCount }}</h4>
             
         </div>
 
         
         <div class="box">
             <i class="fa-solid fa-house-chimney"></i>
-            <button class="btn" routerLink="/list"><h4>VMS</h4></button>
-            
+            <button class="btn" routerLink="/list"><p>VMS</p></button>
+            <h4>{{ vmsCount }}</h4>
         </div>
     </div>
 
     <div class="container mt-5 ">
-        <h4>User Logins<i> Last 30 Days</i></h4>
+        <h3>User Logins<i> Last 30 Days</i></h3>
         <app-graph></app-graph>
     </div>
 </div>

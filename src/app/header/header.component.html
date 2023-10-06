@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-light bg-light px-2 ">
+<nav class="navbar navbar-expand px-2 ">
 
-    <a class = "navbar-brands px-4"href="#"><img src="/assets/logonew.jpg" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+    <!-- <a class = "navbar-brands px-4"href="#"><img src="/assets/logonew.jpg" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a> -->
   
     <div class = "side-nav-button p-2 me-3 text-dark"(click)="SideNavToggle()">
       <i class="fa-solid fa-bars"></i>
@@ -9,12 +9,12 @@
     <div class="navbar-collapse">
       <ul class="navbar-nav me-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" (click)="toggleDropdown()">
+          <a class="nav-link dropdown-toggle" href="#" role="button" (click)="toggleDropdown($event)">
             <img [src]="selectedCountryImage" alt="Flag" width="50" height="30">
           </a>
           <ul class="dropdown-menu dropdown-menu-light" [ngClass]="{ 'show': isDropdownOpen }">
             <li *ngFor="let country of countries">
-              <a class="dropdown-item" href="#" (click)="selectCountry(country)">
+              <a class="dropdown-item" href="#" (click)="selectCountry($event ,country)">
                 <img [src]="country.image" alt="Flag" width="50" height="30">
               </a>
             </li>
@@ -22,21 +22,53 @@
         </li>
       </ul>
     </div>
-  
-    <form class="d-flex me-5">
-      <!-- <input class="form-control me-2" type="search" placeholder="Timezone Convertor"> -->
-      <button type="button" class="btn btn-light">Timezone Convertor</button>
-    </form>
+  <!-- Time zone Convertor button and form -->
 
-    
+    <div class="container">
+      <!-- Button trigger modal -->
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa-solid fa-clock"></i> Timezone Convertor
+        </button>
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Timezone Convertor</h5>
+                <button type="button" class="close" data--bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </div>
+
+    <!-- Compsheet button and form  -->
+
+    <div class="compsheet me-5" >
+      <i class="fa-solid fa-calculator"></i>
+    </div>
+
+    <!-- Application button and form  -->
+
+    <div class="application me-5">
+      <i class="fa-solid fa-table-cells"></i>
+    </div>
   
     <div class="profile-logo dropstart">
       <button class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">
       Dheeraj Kumar Yadav
     </button>
     <ul class="dropdown-menu dropdown-menu-light">
-      <li><a href="#" class="dropdown-item">Sign Up</a></li>
-      <li><a href="#" class="dropdown-item">Log In</a></li>
       <li><a href="#" class="dropdown-item">Your Profile</a></li>
       <li><a href="#" class="dropdown-item">Log Out</a></li>
     </ul>

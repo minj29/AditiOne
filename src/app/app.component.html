@@ -1,10 +1,14 @@
-<div class="container-fluid p-2">
-    <app-header (sideNavToggled)="sideNavStatus = $event"></app-header>
-</div>
 
-<div class="container-fluid m-5">
-    <app-sidepanel [sideNavStatus]="sideNavStatus"[ngClass]="{ 'app-sidepanel-open': sideNavStatus }"></app-sidepanel>
-</div>
-<div class="container-fluid m-5" class="display-area p-3" [ngClass]="{ 'display-area-shrink': sideNavStatus }">
-    <router-outlet></router-outlet>
-</div>
+    <div class="container-fluid m-5">
+        <app-sidepanel [sideNavStatus]="sideNavStatus"[ngClass]="{ 'app-sidepanel-open': sideNavStatus }"></app-sidepanel>
+    </div>
+    
+    <div class="container-fluid p-2">
+        <app-header (sideNavToggled)="sideNavStatus = $event"></app-header>
+    </div>
+    
+    <div class="container-fluid m-5" class="display-area p-3" [ngClass]="{ 'display-area-shrink': sideNavStatus }">
+        <router-outlet></router-outlet>
+    </div>
+   
+    

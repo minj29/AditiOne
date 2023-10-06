@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { datamodel1 } from './msps/msps_model';
+import { Observable, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -31,6 +32,14 @@ export class MspsService {
   //update data
   updateemployee(data:datamodel1,id:number){
     return this.http.put<datamodel1>("http://192.168.29.134:8080/update/"+id,data);
+  }
+
+   //count employee
+   countemployee(): Observable<number> {
+    return this.http.get<{ count: number }>("http://192.168.29.134:8080/count")
+      .pipe(
+        map(response => response.count)
+      );
   }
 }
 

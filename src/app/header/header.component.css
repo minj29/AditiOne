@@ -8,7 +8,7 @@ nav{
     align-items: center;
     font-size: 1.5rem;
     cursor: pointer;
-    margin-left: 120px;
+    margin-left: 10px;
 }
 
 .side-nav-button:hover{
@@ -26,4 +26,33 @@ nav{
 
 .navbar-brands{
     margin-left: 10px;
+}
+.navbar{
+    background-color: rgb(255, 255, 255);
+}
+
+.compsheet{
+    font-size: 1.5rem;
+    margin-left: 50px;
+    color:rgb(42, 41, 41);
+}
+.compsheet:hover{
+    background-color: rgb(232, 242, 242);
+    border-radius: 30%;
+}
+
+.application{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: rgb(42, 41, 41);
+    cursor: pointer;
+}
+.application:hover{
+    background-color: rgb(232, 242, 242);
+    border-radius: 30%;
+}
+
+.container{
+    display: flex;
+    margin-left: 420px;
 }

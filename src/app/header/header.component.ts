@@ -24,11 +24,13 @@ countries = [
   // Add more countries as needed
 ];
 
-toggleDropdown() {
+toggleDropdown(event: Event) {
+  event.stopPropagation();
   this.isDropdownOpen = !this.isDropdownOpen;
 }
 
-selectCountry(country: any) {
+selectCountry(event: Event ,country: any) {
+  event.stopPropagation();
   this.selectedCountryImage = country.image;
   this.isDropdownOpen = false;
   // You can perform any additional actions when a country is selected here

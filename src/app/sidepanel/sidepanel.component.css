@@ -7,7 +7,7 @@
   width: 230px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .nav-list{
@@ -51,6 +51,10 @@ a{
 .list-item-active {
   background-color: rgb(247, 225, 28);
   border-radius: 5px;
-  color: #fff; 
+  color:black;
   
+}
+
+.container{
+  margin-top: 10px;
 }
